@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenidos/as a gifOS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="bienvenidos">
+        <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+    </div>
+
+    <div class="contenedor">
+        <nav>
+            <div>
+                <img class="logo" src="images/gifOF_logo.png" alt="Logo de la pagina GifOs" id="logo">
+            </div>
+
+            <div class="menu">
+                <a class="crear_gifos" href="">Crear Gifos</a>
+                <a class="elegir_tema" href="">
+                    <span>Elegir tema</span>
+                    <img class="img_tema" src="images/dropdown.svg" alt="menu desplegable_imagen flecha">
+                </a>
+                <a class="mis_gifos" href=""><span id="styleM">M</span>is Guifos</a>
+            </div>
+
+        </nav>
+
+
+        <section class="contenedor_buscar">
+            <div class="titulo_buscar">Buscar</div>
+            <div class="busqueda">
+                <input id="input_buscar" type="text" class="input_busqueda" name="input_buscar"
+                    placeholder="Busca gifs, hashtags, temas, busca lo que quieras...">
+                <div id="boton_busqueda" class="boton_busqueda_inactive">
+                    <img id="boton_busqueda_img" src="images/lupa_inactive.svg" alt="Icono buscar">
+                    <span onclick="getSearchResults()">Buscar</span>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="titulo_busqueda_resultado"> (resultados) </h2>
+            <div class="contenido_busqueda" id="contenido"></div>
+        </section>
+
+
+        <section class="sugerencias">
+            <h1 class="titulo_sugerencias_tendencias">Hoy te sugerimos:</h1>
+        </section>
+
+        <section class="tendencias">
+            <h1 class="titulo_sugerencias_tendencias">Tendencias: </h1>
+
+        </section>
+
+    </div>
+    
+    <script src="gif.js"></script>
+</body>
+
+</html>

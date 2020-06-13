@@ -1,0 +1,214 @@
+/*Clases globales*/
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/*Clase mensaje inicial*/
+.bienvenidos{
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  box-shadow: 0 1px 0 0 #110038;
+  border: black solid 1px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  padding-left: 10px;
+}
+
+.contenedor{
+  position: relative;
+  margin-left: 80px;
+  margin-right: 120px;
+}
+
+
+/* Barra de Navegacion */
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 40px;
+}
+
+.logo {
+  position: absolute;
+  width: 100px;
+  height: 64px;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+a{
+  text-decoration: none;
+  margin: 0 5px 0 5px;
+}
+
+.crear_gifos{
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  padding: 5px 20px 5px 20px ;
+
+}
+
+.elegir_tema{
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  padding: 5px 20px 5px 20px ;
+}
+
+/*icono flecha
+.img_tema{ no lo se aun como poner
+
+}*/
+#styleM{
+  text-decoration: underline;
+}
+.mis_gifos{
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 18px;
+  padding: 5px 10px 5px 0;
+  margin-right: -8px;
+
+}
+
+/*Seccion Buscar*/
+
+.contenedor_buscar{
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  top: 100px;
+  position: relative;
+}
+
+.titulo_buscar{
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+}
+
+.busqueda{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px 10px 10px;
+}
+
+.input_busqueda{
+  width: 1037px;
+  padding: 10px 0 10px 0;
+}
+
+.boton_busqueda_inactive{
+  background: #E6E6E6;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #B4B4B4;
+  letter-spacing: 0;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px 6px 12px;
+}
+
+.boton_busqueda_active{
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  padding: 6px 12px 6px 12px;
+}
+
+#boton_busqueda:active {
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  padding: 6px 12px 6px 12px;
+}
+
+
+.titulo_busqueda_resultado{
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  top: 150px;
+  position: relative;
+  padding: 7px;
+}
+
+.contenido_busqueda {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 150px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+
+
+}
+
+.contenido_busqueda_individual{
+  display: inline;
+  padding-left: 3px;
+  padding-bottom: 8px;
+  
+
+
+
+}
+
+/*Seccion Sugerencias*/
+
+.sugerencias{
+  margin-top: 150px;
+}
+
+.titulo_sugerencias_tendencias{
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  padding: 7px;
+
+}
+
+ /*Seccion Tendencias*/
