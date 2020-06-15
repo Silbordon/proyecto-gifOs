@@ -34,7 +34,6 @@
 
         </nav>
 
-
         <section class="contenedor_buscar">
             <div class="titulo_buscar">&nbspBuscar</div>
             <div class="busqueda">
@@ -42,16 +41,16 @@
                     placeholder="    Busca gifs, hashtags, temas, busca lo que quieras...">
                 <div id="boton_busqueda" class="boton_busqueda_inactive">
                     <img id="boton_busqueda_img" src="images/lupa_inactive.svg" alt="Icono buscar">
-                    <span onclick="getSearchResults()">Buscar</span>
+                    <span id="boton_busqueda_span">Buscar</span>
                 </div>
 
             </div>
 
-            <div>
+            <div id="contenedor_sugerencias" class="display-none">
                 <ul class="contened_posibilidades_busqueda">
-                    <li class="posibilidad_busquedaprincipal">&nbsp&nbsp&nbspSugerencia1</li>
-                    <li class="posibilidad_busqueda_opciones">&nbsp&nbsp&nbspSugerencia2</li>
-                    <li class="posibilidad_busqueda_opciones">&nbsp&nbsp&nbspSugerencia3</li>
+                    <li id="autocompletar" class="posibilidad_busqueda_opciones">&nbsp&nbsp&nbsp</li>
+                    <li id="sugerencia1" class="posibilidad_busqueda_opciones">&nbsp&nbsp&nbsp</li>
+                    <li id="sugerencia2" class="posibilidad_busqueda_opciones">&nbsp&nbsp&nbsp</li>
                 </ul>
             </div>
         </section>
@@ -76,7 +75,8 @@
 
     </div>
 
-    <script src="gif.js"></script>
+    <script src="src/gif.js"></script>
+    <script src="src/seccion_busqueda.js"></script>
 </body>
 
 </html>
