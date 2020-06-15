@@ -7,6 +7,7 @@
     <title>¡Bienvenidos/as a gifOS</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -35,14 +36,23 @@
 
 
         <section class="contenedor_buscar">
-            <div class="titulo_buscar">Buscar</div>
+            <div class="titulo_buscar">&nbspBuscar</div>
             <div class="busqueda">
                 <input id="input_buscar" type="text" class="input_busqueda" name="input_buscar"
-                    placeholder="Busca gifs, hashtags, temas, busca lo que quieras...">
+                    placeholder="    Busca gifs, hashtags, temas, busca lo que quieras...">
                 <div id="boton_busqueda" class="boton_busqueda_inactive">
                     <img id="boton_busqueda_img" src="images/lupa_inactive.svg" alt="Icono buscar">
                     <span onclick="getSearchResults()">Buscar</span>
                 </div>
+
+            </div>
+
+            <div>
+                <ul class="contened_posibilidades_busqueda">
+                    <li class="posibilidad_busquedaprincipal">&nbsp&nbsp&nbspSugerencia1</li>
+                    <li class="posibilidad_busqueda_opciones">&nbsp&nbsp&nbspSugerencia2</li>
+                    <li class="posibilidad_busqueda_opciones">&nbsp&nbsp&nbspSugerencia3</li>
+                </ul>
             </div>
         </section>
 
@@ -54,15 +64,18 @@
 
         <section class="sugerencias">
             <h1 class="titulo_sugerencias_tendencias">Hoy te sugerimos:</h1>
+            <div class="contenido_sugerencias" id="seccionSugerencias"></div>
         </section>
+
 
         <section class="tendencias">
             <h1 class="titulo_sugerencias_tendencias">Tendencias: </h1>
+            <div class="contenido_tendencias" id="seccionTendencias"></div>
 
         </section>
 
     </div>
-    
+
     <script src="gif.js"></script>
 </body>
 

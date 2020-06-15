@@ -100,7 +100,7 @@ a{
   box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   top: 100px;
   position: relative;
-}
+  }
 
 .titulo_buscar{
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
@@ -115,11 +115,14 @@ a{
   display: flex;
   justify-content: space-between;
   padding: 10px 15px 10px 10px;
+
 }
 
 .input_busqueda{
-  width: 1037px;
+  width: 1020px;
   padding: 10px 0 10px 0;
+  position: relative;
+
 }
 
 .boton_busqueda_inactive{
@@ -152,7 +155,7 @@ a{
 
 #boton_busqueda:active {
   background: #E6BBE2;
-  border: 1px solid #110038;
+  border: 1px dotted #110038;
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   padding: 6px 12px 6px 12px;
 }
@@ -171,6 +174,52 @@ a{
   padding: 7px;
 }
 
+.contened_posibilidades_busqueda{
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  position: relative;
+  margin-top: -3px;
+}
+
+li{
+  list-style: none;
+}
+
+.posibilidad_busquedaprincipal{
+  border: 1px dotted #110038;
+  width: 1020px;
+  margin-left: -30px ;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 13px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-bottom: 5px;
+  position: relative;
+  margin-top: 10px;
+  padding: 3px 0px 3px 3px;
+
+}
+
+.posibilidad_busqueda_opciones{
+  background: #F0F0F0;
+  border: 1px solid #808080;
+  box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+  width: 1020px;
+  margin-left: -30px ;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 13px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin-bottom: 5px;
+  padding: 3px 0px 3px 3px;
+
+}
+
+
 .contenido_busqueda {
   display: flex;
   flex-wrap: wrap;
@@ -183,15 +232,17 @@ a{
 
 }
 
-.contenido_busqueda_individual{
+.contenido_busqueda_individual {
   display: inline;
   padding-left: 3px;
   padding-bottom: 8px;
-  
-
-
-
 }
+
+
+
+
+
+
 
 /*Seccion Sugerencias*/
 
@@ -199,7 +250,7 @@ a{
   margin-top: 150px;
 }
 
-.titulo_sugerencias_tendencias{
+.titulo_sugerencias_tendencias {
   background: #FFFAFE;
   border: 1px solid #E6BBE2;
   box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D;
@@ -208,7 +259,23 @@ a{
   color: #110038;
   letter-spacing: 0;
   padding: 7px;
-
 }
 
+  .contenido_sugerencias{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 10px;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+
+  }
+
+
  /*Seccion Tendencias*/
+
+.tendencias{
+  position: relative;
+  margin-top: 70px;
+}
