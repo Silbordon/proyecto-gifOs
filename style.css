@@ -73,12 +73,19 @@ a{
   border: 1px solid #110038;
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   padding: 5px 20px 5px 20px ;
+  margin-right: 0px;
 }
 
-/*icono flecha
-.img_tema{ no lo se aun como poner
 
-}*/
+.img_tema{
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  padding: 5px 10px 5px 10px ;
+  margin-right: 5px;
+}
+
+
 #styleM{
   text-decoration: underline;
 }
