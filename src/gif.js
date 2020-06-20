@@ -18,6 +18,7 @@ const seccion_Sugerencias = document.getElementById("seccionSugerencias");
                     trendsHTML += `
                 <div class='contenido_busqueda_individual'>
                     <img src= '${url}' width='275px' height='280px'alt='Imagen'>
+                    <button class='btn_sugerencias'>Ver más...</button>
                 </div>
                 `;
                 })

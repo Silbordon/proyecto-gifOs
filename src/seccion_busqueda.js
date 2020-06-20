@@ -13,7 +13,8 @@ const boton_busqueda_span = document.getElementById('boton_busqueda_span')
 
 
 // Contenido
-const content = document.getElementById('contenido')
+const resultado_titulo = document.getElementById('resultado_busqueda_titulo');
+const content = document.getElementById('contenido');
 
 searchInput.addEventListener('input', (event) => {
     // Cambiar el estilo del boton de acuerdo a si hay texto o no
@@ -35,6 +36,7 @@ function getSearchResults(search) {
             return response.json();
         })
         .then(function (json) {
+            resultado_titulo.innerHTML = `<h2 class="titulo_busqueda_resultado"> ${search}&nbsp&nbsp(resultados) </h2>`
             let trendsHTML = '';
             json.data.forEach(function (obj){
                 const url = obj.images.fixed_width.url;
@@ -93,7 +95,6 @@ sugerencia1.addEventListener('click', (e)=>{
 sugerencia2.addEventListener('click', (e)=>{
     getSearchResults(e.target.textContent)
 })
-
 boton_busqueda_span.addEventListener('click', (e)=>{
     getSearchResults(searchInput.value)
 })
