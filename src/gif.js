@@ -17,7 +17,7 @@ const seccion_Sugerencias = document.getElementById("seccionSugerencias");
                     const url = obj.images.fixed_width.url;
                     trendsHTML += `
                 <div class='contenido_busqueda_individual'>
-                    <h1 class='titulo_sugerencias'> ${titulo_url}</h1>
+                   
                     <img src= '${url}' width='275px' height='280px'alt='Imagen'>
                     <button class='btn_sugerencias'>Ver más...</button>
                 </div>
