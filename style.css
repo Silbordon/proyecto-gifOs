@@ -21,8 +21,8 @@ body{
 
 .contenedor{
   position: relative;
-  margin-left: 80px;
-  margin-right: 120px;
+  margin-left: 7%;
+  margin-right: 9%;
 }
 
 
@@ -233,11 +233,9 @@ li{
 }
 
 .contenido_busqueda_individual {
-  display: inline;
   padding-left: 3px;
   padding-bottom: 8px;
 }
-
 
 /*Seccion Sugerencias*/
 
@@ -261,12 +259,54 @@ li{
     flex-wrap: wrap;
     position: relative;
     top: 10px;
-    margin: 0;
-    padding: 0;
     justify-content: space-between;
 
   }
 
+  .contenido_busqueda_individual_sugerencias{
+    background: #E6E6E6;
+    box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    position: relative;
+    height: 314px;
+    width: 275px;
+    align-self: center;
+
+  }
+
+  .contenedor_titulo_sugerencias{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  }
+
+  .titulo_contenidobusquedaindividual{
+   font-family: 'Chakra Petch', sans-serif;  
+   font-size: 14px;
+   color: #FFFFFF;
+   letter-spacing: 0;
+   font-weight: bold;
+   position: relative;
+   z-index: 99999;
+   margin-top: 0;
+   padding: 5px;
+  }
+
+  .closed{
+  margin-right: 5px;
+  margin-bottom: 7px;
+
+  }
+  .img_sugerencias{
+    position: relative;
+    margin-top: -10px;
+    padding-top: 0;
+    ;
+  }
+
+  .img_sugerencias:hover{
+    border: 1px dotted #110038;
+  }
 
 .btn_sugerencias{
   font-family: 'Chakra Petch', sans-serif;
@@ -285,13 +325,43 @@ li{
   margin-left: 10px;
   display: flex;
   justify-content: left;
-
-
 }
 
+.btn_sugerencias:hover{
+  border: 1px dotted #110038;
+}
  /*Seccion Tendencias*/
 
 .tendencias{
   position: relative;
   margin-top: 70px;
 }
+
+.contenido_tendencias{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+
+}
+
+.titulo_tendenciasindividual{
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-family: 'Chakra Petch', sans-serif;  
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: bold;
+  position: relative;
+  margin-top: -20px;
+  z-index: 99999;}
+
+
+
+.contenido_busqueda_individual_tendencias:hover{
+
+}
+
+.img_tendencias:hover{
+  border: 1px dotted #110038;
+}
+
+
