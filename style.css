@@ -65,6 +65,26 @@ a{
 
 }
 
+.crear_gifos:hover{
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  border: 1px dotted #110038;
+}
+
+.crear_gifos:active{
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  border: 1px dotted #110038;
+}
+
+.tema{
+  display: flex;
+  justify-content: start;
+  position: relative;
+  
+}
 .elegir_tema{
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
@@ -89,6 +109,33 @@ a{
 }
 
 
+.elegir_tema:hover{
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; 
+  border: 1px dotted #110038;
+}
+
+.tema:hover .img_tema , .tema.hover .img_tema{
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; 
+  border: 1px dotted #110038;
+}
+
+.elegir_tema:active{
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; 
+  border: 1px dotted #110038;
+}
+
+.tema:active .img_tema , .tema.active .img_tema{
+  background: #E6BBE2;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; 
+  border: 1px dotted #110038;
+}
 #styleM{
   text-decoration: underline;
 }
@@ -102,6 +149,15 @@ a{
   margin-right: -8px;
 
 }
+
+.mis_gifos:hover{
+  border: 1px dotted #110038;
+}
+
+.mis_gifos:active{
+color: lightslategray;
+}
+
 
 /*Seccion Buscar*/
 
