@@ -306,8 +306,8 @@ li{
 
   .img_sugerencias:hover{
     border: 1px dotted #110038;
-  }
 
+  }
 .btn_sugerencias{
   font-family: 'Chakra Petch', sans-serif;
   font-size: 14px;
@@ -327,9 +327,11 @@ li{
   justify-content: left;
 }
 
-.btn_sugerencias:hover{
+.contenido_busqueda_individual_sugerencias:hover .btn_sugerencias , .contenido_busqueda_individual_sugerencias.hover .btn_sugerencias{
   border: 1px dotted #110038;
 }
+
+
  /*Seccion Tendencias*/
 
 .tendencias{
@@ -338,26 +340,31 @@ li{
 }
 
 .contenido_tendencias{
-  display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 10px;
+  justify-content: space-between;
 
 }
 
 .titulo_tendenciasindividual{
+  display: none;
+}
+
+.contenido_busqueda_individual_tendencias:hover .titulo_tendenciasindividual, .contenido_busqueda_individual_tendencias.hover .titulo_tendenciasindividual {
   background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
-  font-family: 'Chakra Petch', sans-serif;  
+  font-family: 'Chakra Petch', sans-serif;
   font-size: 14px;
   color: #FFFFFF;
   letter-spacing: 0;
   font-weight: bold;
   position: relative;
+  z-index: 99999;
+  margin: 0;
+  display: block;
   margin-top: -20px;
-  z-index: 99999;}
-
-
-
-.contenido_busqueda_individual_tendencias:hover{
-
+  padding: 3px;
 }
 
 .img_tendencias:hover{

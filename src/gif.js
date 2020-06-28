@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <div class='contenido_busqueda_individual_sugerencias'>
                                     <div class= 'contenedor_titulo_sugerencias'>
                                        <h1 class='titulo_contenidobusquedaindividual'># ${url_titulo}</h1>
-                                       <img class='closed' src=/images/close.svg alt='imagen de x'>
+                                       <img class='closed' src="/images/close.svg" alt='imagen de x'>
                                     </div>
                                     <img class='img_sugerencias' src= '${url}' width='270px' height='280px'alt='Imagen'>
                                     <button class='btn_sugerencias'>Ver más...</button>
