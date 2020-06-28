@@ -240,7 +240,7 @@ li{
 /*Seccion Sugerencias*/
 
 .sugerencias{
-  margin-top: 150px;
+  margin-top: 170px;
 }
 
 .titulo_sugerencias_tendencias {
@@ -363,7 +363,7 @@ li{
   z-index: 99999;
   margin: 0;
   display: block;
-  margin-top: -20px;
+  margin-top: -30px;
   padding: 3px;
 }
 
