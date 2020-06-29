@@ -2,6 +2,7 @@
 body{
   margin: 0;
   padding: 0;
+  background-color: #FFF4FD;
 }
 
 .display-none {
@@ -62,6 +63,9 @@ a{
   border: 1px solid #110038;
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
   padding: 5px 20px 5px 20px ;
+  margin-right: 10px;
+  display: inline-table;
+
 
 }
 
@@ -136,7 +140,50 @@ a{
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF; 
   border: 1px dotted #110038;
 }
-#styleM{
+
+.tema_general{
+  display: flex;
+  flex-direction: column;
+}
+
+#elegirtema{
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  width: 138px;
+  margin-left: 5px ;
+  padding: 10px;
+  position: absolute;
+  z-index: 999999;
+  top: 100%;
+  display: none;
+  }
+
+#tema_claro{
+  background: #FFF4FD;
+border: 1px solid #CCA6C9;
+box-shadow: inset -1px -1px 0 0 #E6DCE4, inset 1px 1px 0 0 #FFFFFF;
+font-family: 'Chakra Petch', sans-serif;
+font-size: 16px;
+color: #110038;
+letter-spacing: 0;
+line-height: 22px;
+margin-bottom: 10px;
+padding: 7px;
+}
+
+#tema_oscuro{
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  background: #F0F0F0;
+border: 1px solid #808080;
+box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
+padding: 7px;
+}
+
+.styleM{
   text-decoration: underline;
 }
 .mis_gifos{
