@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡Bienvenidos/as a gifOS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styledark.css">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
-
 </head>
-
 <body>
-
-
     <div class="bienvenidos">
         <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
     </div>
@@ -22,7 +17,6 @@
             <div>
                 <img class="logo" src="images/gifOF_logo.png" alt="Logo de la pagina GifOs" id="logo">
             </div>
-
             <div class="menu">
                 <a class="crear_gifos" href="">Crear Gifos</a>
                 <div class="tema_general">
@@ -38,9 +32,7 @@
                 </div>
                 <a class="mis_gifos" href=""><span class="styleM">M</span>is Gifos</a>
             </div>
-
         </nav>
-
         <section class="contenedor_buscar">
             <div class="titulo_buscar">&nbspBuscar</div>
             <div class="busqueda">
@@ -50,9 +42,7 @@
                     <img id="boton_busqueda_img" src="images/lupa_inactive.svg" alt="Icono buscar">
                     <span id="boton_busqueda_span">Buscar</span>
                 </div>
-
             </div>
-
             <div id="contenedor_sugerencias" class="display-none">
                 <ul class="contened_posibilidades_busqueda">
                     <li id="autocompletar" class="posibilidad_busqueda_opciones"></li>
@@ -61,29 +51,21 @@
                 </ul>
             </div>
         </section>
-
         <section>
             <div id="resultado_busqueda_titulo"></div>
             <div class="contenido_busqueda" id="contenido"></div>
         </section>
-
-
         <section class="sugerencias">
             <h1 class="titulo_sugerencias_tendencias">Hoy te sugerimos:</h1>
             <div class="contenido_sugerencias" id="seccionSugerencias"></div>
         </section>
-
-
         <section class="tendencias">
             <h1 class="titulo_sugerencias_tendencias">Tendencias: </h1>
             <div class="contenido_tendencias" id="seccionTendencias"></div>
-
         </section>
 
     </div>
-
     <script src="src/gif.js"></script>
     <script src="src/seccion_busqueda.js"></script>
 </body>
-
 </html>

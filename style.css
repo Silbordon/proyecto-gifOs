@@ -305,7 +305,7 @@ li{
   background: #F0F0F0;
   border: 1px solid #808080;
   box-shadow: inset -1px -1px 0 0 #B4B4B4, inset 1px 1px 0 0 #FFFFFF;
-  width: 1020px;
+  width: 1000px;
   margin-left: -30px ;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 14px;
@@ -317,6 +317,11 @@ li{
   margin-top: 5px;
 
 }
+
+.posibilidad_busqueda_opciones:hover{
+  border: 1px dotted #110038;
+}
+
 .posibilidad_busqueda_opciones:active{
   border: 1px dotted #110038;
   color: #110038;

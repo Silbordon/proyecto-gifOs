@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                        <h1 class='titulo_contenidobusquedaindividual'># ${url_titulo}</h1>
                                        <img class='closed' src="/images/close.svg" alt='imagen de x'>
                                     </div>
-                                    <img class='img_sugerencias' src= '${url}' width='270px' height='280px'alt='Imagen'>
+                                    <img class='img_sugerencias' src= '${url}' width='273px' height='282px'alt='Imagen'>
                                     <button class='btn_sugerencias'>Ver más...</button>
                                 </div>
                                 `;
@@ -82,3 +82,5 @@ function mostrar_titulo_tendencia(entrada) {
     }
     return result;
 }
+
+   
