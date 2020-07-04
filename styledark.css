@@ -1,8 +1,9 @@
+
 /*Clases globales*/
 body{
     margin: 0;
     padding: 0;
-    background-color: #110038;
+    background-color: var(--color-fondo);
   }
   
 
@@ -147,7 +148,7 @@ body{
     flex-direction: column;
   }
   
-  #elegirtema{
+  #selectorTema{
     background: #B4B4B4;
     box-shadow: inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
     width: 138px;
@@ -156,7 +157,6 @@ body{
     position: absolute;
     z-index: 999999;
     top: 100%;
-    display: none;
     }
   
   #tema_claro{

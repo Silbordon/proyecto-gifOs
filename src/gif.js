@@ -83,4 +83,25 @@ function mostrar_titulo_tendencia(entrada) {
     return result;
 }
 
-   
+
+let selectorTema = document.getElementById("selector_tema");
+selectorTema.addEventListener("click", ()=> {
+    let menu = document.getElementById("selectorTema");
+    menu.classList.toggle("display-none");
+})
+
+let sailorDay = document.getElementById("tema_claro");
+sailorDay.addEventListener("click", ()=>{
+    let body = document.getElementsByTagName("body");
+    body[0].classList.remove("dark");
+})
+
+let sailorNight = document.getElementById("tema_oscuro");
+sailorNight.addEventListener("click", ()=>{
+    let body = document.getElementsByTagName("body");
+    body[0]. classList.add("dark");
+    let lupaInactive = document.getElementById("boton_busqueda_img");
+    lupaInactive.setAttribute("scr", "images/lupa_light.svg");
+    let logo = document.getElementById("logo");
+    logo.setAttribute("src", "images/gifOF_logo_dark.png");
+})
