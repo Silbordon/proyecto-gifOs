@@ -94,14 +94,14 @@ let sailorDay = document.getElementById("tema_claro");
 sailorDay.addEventListener("click", ()=>{
     let body = document.getElementsByTagName("body");
     body[0].classList.remove("dark");
+    let logo = document.getElementById("logo");
+    logo.setAttribute("src", "images/gifOF_logo.png");
 })
 
 let sailorNight = document.getElementById("tema_oscuro");
 sailorNight.addEventListener("click", ()=>{
     let body = document.getElementsByTagName("body");
     body[0]. classList.add("dark");
-    let lupaInactive = document.getElementById("boton_busqueda_img");
-    lupaInactive.setAttribute("scr", "images/lupa_light.svg");
     let logo = document.getElementById("logo");
     logo.setAttribute("src", "images/gifOF_logo_dark.png");
 })

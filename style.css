@@ -147,7 +147,6 @@ a{
   background: var(--selector-tema_background);
   box-shadow: var(--selector-tema_box-shadow);
   width: 138px;
-  margin-left: 5px ;
   padding: 10px;
   position: absolute;
   z-index: 999999;
