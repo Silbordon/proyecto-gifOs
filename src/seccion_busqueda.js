@@ -20,7 +20,11 @@ searchInput.addEventListener('input', (event) => {
     // Cambiar el estilo del boton de acuerdo a si hay texto o no
     if (event.target.value.length > 0) {
         searchButton.classList.replace('boton_busqueda_inactive', 'boton_busqueda_active')
-        searchButtonImg.setAttribute('src', 'images/lupa.svg');
+        if (document.getElementsByTagName('body')[0].classList.contains('dark')){
+            searchButtonImg.setAttribute('src', 'images/lupa_light.svg');
+        } else {
+            searchButtonImg.setAttribute('src', 'images/lupa.svg');
+        }
         cont_sugerencias.classList.remove('display-none');
         completarSugerencias(event.target.value);
     } else {

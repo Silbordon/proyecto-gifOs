@@ -102,6 +102,8 @@ let sailorNight = document.getElementById("tema_oscuro");
 sailorNight.addEventListener("click", ()=>{
     let body = document.getElementsByTagName("body");
     body[0]. classList.add("dark");
+    let lupa=document.getElementById("boton_busqueda_img");
+    lupa.setAttribute("src", "images/combinedShape.svg");
     let logo = document.getElementById("logo");
     logo.setAttribute("src", "images/gifOF_logo_dark.png");
 })
