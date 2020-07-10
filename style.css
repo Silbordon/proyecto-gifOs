@@ -344,6 +344,25 @@ li{
   padding-bottom: 8px;
 }
 
+#historial-busqueda{
+  display: flex;
+  flex-direction: row;
+  top: 110px;
+  position: relative;
+}
+
+.historial{
+background: #4180F6;
+border: 1px solid #4C2F99;
+box-shadow: inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
+font-family: 'Chakra Petch', sans-serif;
+font-size: 14px;
+color: #FFFFFF;
+letter-spacing: 0;
+line-height: 18px;
+margin-right: 10px;
+padding: 6px;
+}
 /*Seccion Sugerencias*/
 
 .sugerencias{
@@ -479,3 +498,130 @@ li{
 }
 
 
+/*Seccion Mis guifos*/
+.titulo_misguifos{
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D; 
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  top: 100px;
+  position: relative;
+  padding: 7px;
+}
+
+/*Seccion Crear Guifos*/
+.logos_crear{
+  position: relative;
+  top: 40px;
+  justify-content: center;
+  margin-left: -40px;
+}
+
+.flecha-crear{
+  margin-top: 20px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.contenedor-instrucciones{
+  position: relative;
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  width: 650px;
+  height: 386px;
+  top: 130px;
+  left: 300px;
+}
+
+.titulo-instrucciones{
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: bold;
+  position: relative;
+
+}
+
+.titulo-crear{
+  position: relative;
+  margin-left: 30px;
+  top: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.img-compu{
+  width: 32px;
+  height: 32px;
+}
+
+.crear{
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  line-height: 22px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: 0px;
+}
+
+.instrucciones{
+font-family: 'Chakra Petch', sans-serif;
+font-size: 14px;
+color: #110038;
+letter-spacing: 0;
+line-height: 20px;
+width: 518px;
+position: relative;
+margin-left: 80px ;
+}
+
+.p-instrucciones{
+margin-top: 12px;
+}
+
+.instruciones-btn{
+display: flex;
+justify-content: right;
+position: relative;
+margin-left: 340px;
+}
+
+.btn-cancelar{
+  background: #FFF4FD;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  padding: 6px 15px 6px 15px; 
+  width: 100px;
+}
+
+.btn-comenzar{
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  padding: 6px 15px 6px 15px; 
+  width: 100px;
+  margin-left: 8px;
+}
+.contenedor-misguifos{
+  position: relative;
+  top: 150px;
+}

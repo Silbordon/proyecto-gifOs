@@ -35,6 +35,11 @@ searchInput.addEventListener('input', (event) => {
 });
 
 function getSearchResults(search) {
+    searchInput.scrollIntoView();
+    searchInput.value = search
+    if (document.getElementsByName(`'${search}'`).length == 0) {
+        historialbusqueda.innerHTML += `<button name="'${search}'" onclick="getSearchResults('${search}')" class="historial">#${search}</button>`
+    }
     const found = fetch(`http://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${search}&limit=16`)
         .then(response => {
             return response.json();
@@ -99,7 +104,12 @@ sugerencia1.addEventListener('click', (e)=>{
 sugerencia2.addEventListener('click', (e)=>{
     getSearchResults(e.target.textContent)
 })
+
+
+let historialbusqueda = document.getElementById("historial-busqueda");
 boton_busqueda_span.addEventListener('click', (e)=>{
     getSearchResults(searchInput.value)
 })
+
+
 

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                        <img class='closed' src="/images/close.svg" alt='imagen de x'>
                                     </div>
                                     <img class='img_sugerencias' src= '${url}' width='273px' height='282px'alt='Imagen'>
-                                    <button class='btn_sugerencias'>Ver más...</button>
+                                    <button onclick="getSearchResults('${url_titulo}')"class='btn_sugerencias'>Ver más...</button>
                                 </div>
                                 `;
                 })
@@ -107,3 +107,26 @@ sailorNight.addEventListener("click", ()=>{
     let logo = document.getElementById("logo");
     logo.setAttribute("src", "images/gifOF_logo_dark.png");
 })
+
+
+
+let video = document.getElementById('comenzar');
+video.addEventListener("click", =>{
+    function getStreamAndRecord () { 
+        navigator.mediaDevices.getUserMedia({
+        audio: false,
+        video: {
+        height: { max: 480 }
+        
+        }
+        
+        })
+        
+        .then(function(stream) {
+        video.srcObject = stream;
+        video.play()
+        }
+    
+})
+
+
