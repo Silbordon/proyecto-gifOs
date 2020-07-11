@@ -526,11 +526,11 @@ padding: 6px;
   position: relative;
 }
 
-.contenedor-instrucciones{
+#contenedor-instrucciones{
   position: relative;
   background: #E6E6E6;
   box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
-  width: 650px;
+  width: 684px;
   height: 386px;
   top: 130px;
   left: 300px;
@@ -623,5 +623,114 @@ margin-left: 340px;
 }
 .contenedor-misguifos{
   position: relative;
-  top: 150px;
+  top: 120px;
+}
+
+/*Seccion video-captura*/
+#contenedor-video{
+  position: relative;
+  background: #E6E6E6;
+  box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+  width: 810px;
+  height: 510px;
+  top: 160px;
+  left: 180px;
+}
+
+.chequeo{
+  background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  }
+
+.titulo-chequeo{
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  position: relative;
+}
+
+.close-crear{
+position: relative;
+margin-right: 10px;
+}
+
+#video-inicial{
+background: #FFFFFF;
+border: 1px solid #979797;
+box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+width: 785px;
+height: 400px;
+position: relative;
+top: 10px;
+left: 10px;
+}
+
+.contenedor-captura{
+  position: relative;
+  top: 20px;
+}
+
+.camara-day{
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  padding: 5px 8px 5px 8px;
+  margin-left: 650px;
+  margin-right: 0px;
+}
+
+#capturar{
+background: #F7C9F3;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+padding: 5px 30px 5px 30px;
+margin-left: -4px;
+top: -9px;
+position: relative;
+}
+
+
+/*Seccion grabacion-LISTO*/
+#tituloCaptura{
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  position: relative;
+}
+
+#contenedorlisto{
+  position: relative;
+  top: 20px;
+}
+
+.recording{
+background: #FF6161;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+padding: 5px 10px 5px 10px;
+margin-left: 650px;
+margin-right: 0px;
+}
+
+#listo{
+background: #FF6161;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
+font-family: 'Chakra Petch', sans-serif;
+font-size: 16px;
+color: #FFFFFF;
+letter-spacing: 0;
+text-align: center;
+line-height: 18px;
+padding: 5px 30px 4px 30px;
+margin-left: -4px;
+top: -10px;
+position: relative;
 }

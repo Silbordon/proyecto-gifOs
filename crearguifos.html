@@ -12,12 +12,12 @@
     <p>¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
 </div>
 <div class="contenedor">
-        <div class="logos_crear">
-            <a href="index.html"><img class="flecha-crear" src="images/arrow.svg" alt="flecha"></a>
-            <img class="logo" src="images/gifOF_logo.png" alt="Logo de la pagina GifOs" id="logo">
-        </div>
+    <div class="logos_crear">
+        <a href="index.html"><img class="flecha-crear" src="images/arrow.svg" alt="flecha"></a>
+        <img class="logo" src="images/gifOF_logo.png" alt="Logo de la pagina GifOs" id="logo">
+    </div>
 
-    <section class="contenedor-instrucciones">
+    <section id="contenedor-instrucciones">
         <div class="titulo-instrucciones">
             <p>&nbspCrear Guifos</p>
         </div>
@@ -26,30 +26,48 @@
             <p class="crear">Aquí podrás crear tus propios guifos</p>
         </div>
         <div class="instrucciones">
-            <p class="p-instrucciones">Crear tu <b><i>guifo</i></b> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados. Los pasos para crear tu guifo son:</p>
+            <p class="p-instrucciones">Crear tu <b><i>guifo</i></b> es muy fácil, graba cualquier imagen con tu cámara y
+                obtén guifos personalizados. Los pasos para crear tu guifo son:</p>
             <p class="p-instrucciones"><b>1)</b> Dar permisos de acceso a la cámara (sólo por el tiempo de uso)</p>
             <p class="p-instrucciones"><b>2)</b> Capturar tu momento guifo</p>
-            <p class="p-instrucciones"><b>3)</b> Revisar el momento</p> 
+            <p class="p-instrucciones"><b>3)</b> Revisar el momento</p>
             <p class="p-instrucciones"><b>4)</b> Listo para subir y compartir!</p>
-            <p class="p-instrucciones">¿Quieres comenzar a crear tu <b><i>guifo</i></b> ahora?</p> 
-        </div>   
-         <div class="instruciones-btn">
-             <a class="btn-cancelar" href="index.html">Cancelar</a>
-             <a class="btn-comenzar" id="comenzar">Comenzar</a> 
-         </div>      
-    </section>   
-    <section>
-         <video src=""></video>
+            <p class="p-instrucciones">¿Quieres comenzar a crear tu <b><i>guifo</i></b> ahora?</p>
+        </div>
+        <div class="instruciones-btn">
+            <a class="btn-cancelar" href="index.html">Cancelar</a>
+            <a class="btn-comenzar" id="comenzar">Comenzar</a>
+        </div>
     </section>
+
+    <section id="contenedor-video" class="display-none">
+        <div class="chequeo">
+            <h1 class="titulo-chequeo" id="tituloAntes">&nbspUn Chequeo Antes de Empezar</h1>
+            <h1 class="display-none" id="tituloCaptura">&nbspCapturando Tu Guifo</h1>
+            <img class="close-crear" src="images/close.svg" alt="x">
+        </div>
+        <video id="video-inicial" src=""></video>
+
+        <div class="contenedor-captura" id="contenedorcaptura">
+            <img class="camara-day" src="images/camera.svg" alt="camara">
+            <span id="capturar">Capturar</span>
+        </div>
+        
+        <div class="display-none" class="contenedor-listo"  id="contenedorlisto">
+            <img class="recording" src="images/recording.svg" alt="camara grabando">
+            <span id="listo">Listo</span>
+        </div>
+    </section>
+
     <section class="contenedor-misguifos">
         <h1 class="titulo_misguifos">Mis Guifos</h1>
         <div class="contenido_busqueda"></div>
     </section>
-  
+
 
 </div>
+<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+<script src="src/video.js"></script>
 
-    <script src="src/gif.js"></script>
-    <script src="src/seccion_busqueda.js"></script>
 </body>
 </html>

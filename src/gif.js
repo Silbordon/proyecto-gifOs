@@ -65,8 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     getTendencias();
-
-    
 }
 );
 
@@ -83,15 +81,15 @@ function mostrar_titulo_tendencia(entrada) {
     return result;
 }
 
-
+//Selector Tema: claro y oscuro
 let selectorTema = document.getElementById("selector_tema");
-selectorTema.addEventListener("click", ()=> {
+selectorTema.addEventListener("click", () => {
     let menu = document.getElementById("selectorTema");
     menu.classList.toggle("display-none");
 })
 
 let sailorDay = document.getElementById("tema_claro");
-sailorDay.addEventListener("click", ()=>{
+sailorDay.addEventListener("click", () => {
     let body = document.getElementsByTagName("body");
     body[0].classList.remove("dark");
     let logo = document.getElementById("logo");
@@ -99,34 +97,13 @@ sailorDay.addEventListener("click", ()=>{
 })
 
 let sailorNight = document.getElementById("tema_oscuro");
-sailorNight.addEventListener("click", ()=>{
+sailorNight.addEventListener("click", () => {
     let body = document.getElementsByTagName("body");
-    body[0]. classList.add("dark");
-    let lupa=document.getElementById("boton_busqueda_img");
+    body[0].classList.add("dark");
+    let lupa = document.getElementById("boton_busqueda_img");
     lupa.setAttribute("src", "images/combinedShape.svg");
     let logo = document.getElementById("logo");
     logo.setAttribute("src", "images/gifOF_logo_dark.png");
-})
-
-
-
-let video = document.getElementById('comenzar');
-video.addEventListener("click", =>{
-    function getStreamAndRecord () { 
-        navigator.mediaDevices.getUserMedia({
-        audio: false,
-        video: {
-        height: { max: 480 }
-        
-        }
-        
-        })
-        
-        .then(function(stream) {
-        video.srcObject = stream;
-        video.play()
-        }
-    
 })
 
 
