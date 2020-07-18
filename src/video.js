@@ -14,8 +14,6 @@ comenzar.addEventListener('click', () => {
     getStreamAndRecord();
 })
 
-let recorder
-
 function getStreamAndRecord() {
     navigator.mediaDevices.getUserMedia({
         audio: false,
@@ -44,50 +42,45 @@ function getStreamAndRecord() {
 }
 
 
-captura.addEventListener('click', () => {
+
+captura.addEventListener('click', async function f() {
     captura.classList.add('display-none');
     grabando.classList.remove('display-none');
     tituloantes.classList.add('display-none');
     titulocaptura.classList.remove('display-none');
-
-})
-
-
-captura.addEventListener('click', async function f() {
-
-    recorder.startRecording();
-    const sleep = m => new Promise(r => setTimeout(r, m));
-    await sleep(3000);
-    console.log("Start recording");
-})
-
-recorder.stopRecording(function () {
-    let blob = recorder.getBlob();
-    invokeSaveAsDialog(blob);
-});
-
-
-/*Funcion cronometro
-
-let segundos = 0;
-let minutos = 0;
-let horas = 0;
-
-
-function f() {
     setInterval(function () {
-        segundos++;
-        mostrar(segundos)
+        mostrar()
     }, 1000)
-}
+    // recorder.startRecording();
+    // const sleep = m => new Promise(r => setTimeout(r, m));
+    // await sleep(3000);
+    // console.log("Start recording");
+    // recorder.stopRecording(function () {
+    //     let blob = recorder.getBlob();
+    //     invokeSaveAsDialog(blob);
+    // });
+})
+
+//Seccion cronometro
 
 let seg = document.getElementById('screen')
-function mostrar(segundos) {
-    seg.innerText = segundos
-}
+mm = 0;
+hh = 0;
+ss = 0
+function mostrar() {
+    ss++;
+    if (ss == 59) {
+        ss = 0;
+        mm++;
 
- 
-*/
+        if (mm == 59) {
+            mm = 0;
+            hh++;
+        }
+    }
+    let format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+    seg.innerHTML = format
+}
  
 
  

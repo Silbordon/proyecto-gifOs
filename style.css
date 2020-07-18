@@ -624,6 +624,7 @@ margin-left: 340px;
 .contenedor-misguifos{
   position: relative;
   top: 120px;
+  z-index: -1;
 }
 
 /*Seccion video-captura*/
