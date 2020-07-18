@@ -734,3 +734,22 @@ margin-left: -4px;
 top: -10px;
 position: relative;
 }
+
+.chronometer{
+background: #FFFFFF;
+border: 1px solid #979797;
+box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+width: 130px;
+top: -35px;
+left: 10px;
+position: relative;
+}
+
+#screen{
+font-family: 'Chakra Petch', sans-serif;
+font-size: 16px;
+color: #110038;
+letter-spacing: 0;
+line-height: 22px;
+text-align: center;
+}
