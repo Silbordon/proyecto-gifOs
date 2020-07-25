@@ -7,6 +7,9 @@ let seccionVideo = document.getElementById('contenedor-video');
 let grabando = document.getElementById('contenedorlisto');
 let tituloantes = document.getElementById('tituloAntes');
 let titulocaptura = document.getElementById('tituloCaptura');
+let vistaprevia = document.getElementById('contenedor-vistaprevia');
+let titulovistaprevia = document.getElementById('titulovistaprevia');
+let x = document.getElementById('close-crear')
 
 comenzar.addEventListener('click', () => {
     seccionInstrucciones.classList.add('display-none');
@@ -81,7 +84,14 @@ function mostrar() {
     let format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
     seg.innerHTML = format
 }
- 
+
+grabando.addEventListener('click', () => {
+    grabando.classList.add('display-none');
+    vistaprevia.classList.remove('display-none');
+    titulocaptura.classList.add('display-none');
+    titulovistaprevia.classList.remove('display-none');
+    x.classList.add('display-none');
+})
 
  
  

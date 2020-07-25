@@ -44,8 +44,10 @@
         <div class="chequeo">
             <h1 class="titulo-chequeo" id="tituloAntes">&nbspUn Chequeo Antes de Empezar</h1>
             <h1 class="display-none" id="tituloCaptura">&nbspCapturando Tu Guifo</h1>
-            <img class="close-crear" src="images/close.svg" alt="x">
+            <h1 class="display-none" id="titulovistaprevia">&nbspVista Previa</h1>
+            <img id="close-crear" src="images/close.svg" alt="x">
         </div>
+
         <video id="video-inicial" src=""></video>
 
         <div class="contenedor-captura" id="contenedorcaptura">
@@ -53,13 +55,24 @@
             <span id="capturar">Capturar</span>
         </div>
         
-        <div class="display-none" class="contenedor-listo"  id="contenedorlisto">
+        <div class="display-none" id="contenedorlisto">
             <img class="recording" src="images/recording.svg" alt="camara grabando">
             <span id="listo">Listo</span>
             <div class="chronometer">
-                <div id="screen">00 : 00 : 00 : 00</div>
+                <div id="screen">00 : 00 : 00</div>
             </div>
         </div>
+
+       <div class="display-none" id="contenedor-vistaprevia">
+           <div class="barra-progreso">
+               <img class="flecha-vistaprevia" src="images/forward.svg">
+               <div class="progreso-individual"></div>
+           </div>
+           <div class="botones-vistaprevia">
+           <span id="repetircaptura">Repetir Captura</span>
+           <span id="subirguifo">Subir Guifo</span>
+           </div>
+       </div>
 
 
     </section>

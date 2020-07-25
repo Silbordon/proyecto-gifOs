@@ -544,7 +544,6 @@ padding: 6px;
   letter-spacing: 0;
   font-weight: bold;
   position: relative;
-
 }
 
 .titulo-crear{
@@ -655,7 +654,7 @@ margin-left: 340px;
   position: relative;
 }
 
-.close-crear{
+#close-crear{
 position: relative;
 margin-right: 10px;
 }
@@ -690,7 +689,7 @@ background: #F7C9F3;
 border: 1px solid #110038;
 box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
 padding: 5px 30px 5px 30px;
-margin-left: -4px;
+margin-left: -10px;
 top: -9px;
 position: relative;
 }
@@ -716,8 +715,8 @@ background: #FF6161;
 border: 1px solid #110038;
 box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
 padding: 5px 10px 5px 10px;
-margin-left: 650px;
-margin-right: 0px;
+margin-left: 655px;
+margin-right: 0;
 }
 
 #listo{
@@ -753,4 +752,62 @@ color: #110038;
 letter-spacing: 0;
 line-height: 22px;
 text-align: center;
+}
+
+/*Seccion Vista previa*/
+
+#titulovistaprevia{
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  font-weight: bold;
+}
+
+.flecha-vistaprevia{
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  width: 20px;
+  height: 20px;
+}
+
+.botones-vistaprevia{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  margin-right: 15px;
+  top: -4px;
+}
+
+#repetircaptura {
+  background: #FFF4FD;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  padding: 5px 5px 4px 5px;
+  margin-right: 10px;
+}
+
+#subirguifo{
+  background: #F7C9F3;
+  border: 1px solid #110038;
+  box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 16px;
+  color: #110038;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 18px;
+  position: relative;
+  text-align: center;
+  padding: 5px 20px 4px 20px;
 }
