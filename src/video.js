@@ -9,7 +9,11 @@ let tituloantes = document.getElementById('tituloAntes');
 let titulocaptura = document.getElementById('tituloCaptura');
 let vistaprevia = document.getElementById('contenedor-vistaprevia');
 let titulovistaprevia = document.getElementById('titulovistaprevia');
-let x = document.getElementById('close-crear')
+let x = document.getElementById('close-crear');
+let repetircaptura = document.getElementById('repetircaptura');
+let subirguifo = document.getElementById('subirguifo');
+let subiendoguifo = document.getElementById('subiendo-gif');
+let titulosubiendoguifo = document.getElementById('titulosubiendo-guifo');
 
 comenzar.addEventListener('click', () => {
     seccionInstrucciones.classList.add('display-none');
@@ -91,11 +95,35 @@ grabando.addEventListener('click', () => {
     titulocaptura.classList.add('display-none');
     titulovistaprevia.classList.remove('display-none');
     x.classList.add('display-none');
+
+     //Barra de progreso
+let pasos = 0;
+
+id_barra_progreso = setInterval(estadosBarraProgreso, 1000)
+
+function estadosBarraProgreso() {
+    pasos++
+    if (pasos <= 15) {
+        document.querySelector('#p_' + pasos).classList.remove('libre')
+        document.querySelector('#p_' + pasos).classList.add('ocupado')
+    }else{
+      pasos = 0;
+    }
+}
 })
 
- 
- 
+
+repetircaptura.addEventListener('click', ()=>{
+
+})
 
 
+subirguifo.addEventListener('click', ()=>{
+    vistaprevia.classList.add('display-none');
+    titulovistaprevia.classList.add('display-none');
+    x.classList.remove('display-none');
+    subiendoguifo.classList.remove('display-none');
+    titulosubiendoguifo.classList.remove('display-none');
+    video.classList.add('display-none');
 
-
+})

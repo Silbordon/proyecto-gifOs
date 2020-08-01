@@ -45,6 +45,8 @@
             <h1 class="titulo-chequeo" id="tituloAntes">&nbspUn Chequeo Antes de Empezar</h1>
             <h1 class="display-none" id="tituloCaptura">&nbspCapturando Tu Guifo</h1>
             <h1 class="display-none" id="titulovistaprevia">&nbspVista Previa</h1>
+            <h1 class="display-none" id="titulosubiendo-guifo">&nbspSubiendo Guifo</h1>
+
             <img id="close-crear" src="images/close.svg" alt="x">
         </div>
 
@@ -64,17 +66,52 @@
         </div>
 
        <div class="display-none" id="contenedor-vistaprevia">
-           <div class="barra-progreso">
+           <div class="barra-progresocompleta">
                <img class="flecha-vistaprevia" src="images/forward.svg">
-               <div class="progreso-individual"></div>
+               <ul class="ba_progreso">
+                <li class="li_progreso libre" id="p_1"></li>
+                <li class="li_progreso libre" id="p_2"></li>
+                <li class="li_progreso libre" id="p_3"></li>
+                <li class="li_progreso libre" id="p_4"></li>
+                <li class="li_progreso libre" id="p_5"></li>
+                <li class="li_progreso libre" id="p_6"></li>
+                <li class="li_progreso libre" id="p_7"></li>
+                <li class="li_progreso libre" id="p_8"></li>
+                <li class="li_progreso libre" id="p_9"></li>
+                <li class="li_progreso libre" id="p_10"></li>
+                <li class="li_progreso libre" id="p_11"></li>
+                <li class="li_progreso libre" id="p_12"></li>
+                <li class="li_progreso libre" id="p_13"></li>
+                <li class="li_progreso libre" id="p_14"></li>
+                <li class="li_progreso libre" id="p_15"></li>
+              </ul>
            </div>
            <div class="botones-vistaprevia">
-           <span id="repetircaptura">Repetir Captura</span>
-           <span id="subirguifo">Subir Guifo</span>
+                <span id="repetircaptura">Repetir Captura</span>
+                <span id="subirguifo">Subir Guifo</span>
            </div>
        </div>
 
-
+       <div class="display-none" id="subiendo-gif">
+           <div class="contenedor-subiendoguifo">
+           <img src="images/globe_img.png" class="img-globo" alt="globo-mundo">
+           <h1 class="titulo-subiendo">Estamos subiendo tu guifo…</h1>
+           <ul class="ba_progreso">
+            <li class="li_progreso libre" id="p_1"></li>
+            <li class="li_progreso libre" id="p_2"></li>
+            <li class="li_progreso libre" id="p_3"></li>
+            <li class="li_progreso libre" id="p_4"></li>
+            <li class="li_progreso libre" id="p_5"></li>
+            <li class="li_progreso libre" id="p_6"></li>
+            <li class="li_progreso libre" id="p_7"></li>
+            <li class="li_progreso libre" id="p_8"></li>
+            <li class="li_progreso libre" id="p_9"></li>
+            <li class="li_progreso libre" id="p_10"></li>
+           </ul>
+           <h2 class="tiemporestante">Tiempo restante: <del>38 años</del> algunos minutos</h2>
+        </div>
+        <a class="btn-cancelar2" href="index.html">Cancelar</a>
+       </div>
     </section>
 
     <section class="contenedor-misguifos">
