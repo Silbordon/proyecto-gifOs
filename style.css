@@ -619,7 +619,15 @@ margin-left: 340px;
   padding: 6px 15px 6px 15px; 
   width: 100px;
   margin-left: 8px;
+  cursor: pointer;
 }
+
+.btn-comenzar:hover{
+background: #E6BBE2;
+border: 1px solid #110038;
+box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;
+}
+
 .contenedor-misguifos{
   position: relative;
   top: 120px;
