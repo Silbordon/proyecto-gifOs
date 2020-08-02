@@ -753,7 +753,7 @@ left: 10px;
 position: relative;
 }
 
-#screen{
+.cronometro{
 font-family: 'Chakra Petch', sans-serif;
 font-size: 16px;
 color: #110038;
@@ -782,7 +782,6 @@ text-align: center;
   display:flex;
   position: relative;
   justify-content: flex-start;
-  background-color: yellow;
   width: 300px;
   left: 130px;
 
