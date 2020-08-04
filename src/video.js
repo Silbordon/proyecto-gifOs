@@ -138,5 +138,6 @@ subirguifo.addEventListener('click', () => {
     subiendoguifo.classList.remove('display-none');
     titulosubiendoguifo.classList.remove('display-none');
     video.classList.add('display-none');
+    videoGif.classList.add('display-none');
 
 })

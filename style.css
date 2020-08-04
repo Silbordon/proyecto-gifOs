@@ -690,6 +690,8 @@ left: 10px;
   padding: 5px 8px 5px 8px;
   margin-left: 650px;
   margin-right: 0px;
+  cursor: pointer;
+
 }
 
 #capturar{
@@ -700,6 +702,8 @@ padding: 5px 30px 5px 30px;
 margin-left: -10px;
 top: -9px;
 position: relative;
+  cursor: pointer;
+
 }
 
 
@@ -725,6 +729,8 @@ box-shadow: inset -1px -1px 0 0 #993A3A, inset 1px 1px 0 0 #FFFFFF;
 padding: 5px 10px 5px 10px;
 margin-left: 655px;
 margin-right: 0;
+  cursor: pointer;
+
 }
 
 #listo{
@@ -741,6 +747,8 @@ padding: 5px 30px 4px 30px;
 margin-left: -4px;
 top: -10px;
 position: relative;
+  cursor: pointer;
+
 }
 
 .chronometer{
@@ -774,8 +782,27 @@ text-align: center;
 
 #contenedor-vistaprevia{
   position: relative;
-  
+}
 
+#video-gif{
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  width: 785px;
+  height: 400px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+
+}
+
+.chronometer2{
+  background: #FFFFFF;
+  border: 1px solid #979797;
+  box-shadow: inset -2px -2px 0 0 #E6E6E6, inset 2px 2px 0 0 #000000;
+  width: 130px;
+  top: 25px;
+  position: relative;
+  left: 10px;
 }
 
 .barra-progresocompleta{
@@ -783,7 +810,7 @@ text-align: center;
   position: relative;
   justify-content: flex-start;
   width: 300px;
-  left: 130px;
+  left: 170px;
 
 }
 
@@ -825,7 +852,7 @@ text-align: center;
   justify-content: flex-end;
   position: relative;
   margin-right: 15px;
-  top: -4px;
+  top: -25px;
 }
 
 #repetircaptura {
@@ -842,6 +869,8 @@ text-align: center;
   text-align: center;
   padding: 5px 5px 4px 5px;
   margin-right: 10px;
+  cursor: pointer;
+
 }
 
 #subirguifo{
@@ -857,6 +886,8 @@ text-align: center;
   position: relative;
   text-align: center;
   padding: 5px 20px 4px 20px;
+  cursor: pointer;
+
 }
 
 /*Subiendo Guifo*/
@@ -926,5 +957,7 @@ position: relative;
   left: 665px;
   top: 28px;
   position: relative;
+  cursor: pointer;
+
 
 }
