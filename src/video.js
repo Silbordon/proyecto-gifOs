@@ -90,8 +90,9 @@ function stopRecording() {
 
     //Barra de progreso
     let pasos = 0;
+    let timecomplete = timeSeconds*1000/15
 
-    id_barra_progreso = setInterval(estadosBarraProgreso, 1000)
+    id_barra_progreso = setInterval(estadosBarraProgreso, timecomplete)
 
     function estadosBarraProgreso() {
         pasos++
