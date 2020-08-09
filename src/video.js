@@ -15,17 +15,43 @@ let subirguifo = document.getElementById('subirguifo');
 let subiendoguifo = document.getElementById('subiendo-gif');
 let titulosubiendoguifo = document.getElementById('titulosubiendo-guifo');
 let videoGif = document.getElementById('video-gif');
+let seg = document.getElementById('screen');
+let seg2 = document.getElementById('screen2');
 let interval
 let recorder
+let barra
 
 
+//Pasos
 comenzar.addEventListener('click', getStreamAndRecord);
 repetircaptura.addEventListener('click', getStreamAndRecord);
 captura.addEventListener('click', startRecording);
 grabando.addEventListener('click', stopRecording);
+subirguifo.addEventListener('click', subirGifo);
 
 function getStreamAndRecord() {
+    //Init cronometro
+    mm = 0;
+    hh = 0;
+    ss = 0;
+    format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
+    seg.innerHTML = format;
+    totalSeconds = 0;
+
+
+
     //preparo la vista
+    captura.classList.remove('display-none');
+    tituloantes.classList.remove('display-none');
+    grabando.classList.add('display-none');
+    titulocaptura.classList.add('display-none');
+    vistaprevia.classList.add('display-none');
+    titulovistaprevia.classList.add('display-none');
+    x.classList.remove('display-none');
+    subiendoguifo.classList.add('display-none');
+    titulosubiendoguifo.classList.add('display-none');
+    video.classList.remove('display-none');
+    videoGif.classList.add('display-none');
     seccionInstrucciones.classList.add('display-none');
     seccionVideo.classList.remove('display-none');
     //Se prende la camara
@@ -64,13 +90,16 @@ function startRecording() {
     titulocaptura.classList.remove('display-none');
     //contador del tiempo
     interval = setInterval(function () {
-        mostrar()
+        mostrarCronometro()
     }, 1000)
     //Empieza la Grabacion
     recorder.startRecording();
 }
 
 function stopRecording() {
+    //detiene el tiempo
+    clearInterval(interval);
+    clearInterval(barra);
     //prepara la vista
     grabando.classList.add('display-none');
     vistaprevia.classList.remove('display-none');
@@ -79,44 +108,63 @@ function stopRecording() {
     x.classList.add('display-none');
     video.classList.add('display-none');
     videoGif.classList.remove('display-none');
-    //detiene el tiempo
-    clearInterval(interval);
-    //Stop la grabacion
+    //Stop la grabacion y prender video gif
     recorder.stopRecording(function () {
         videoGif.src = URL.createObjectURL(recorder.getBlob());
     })
-//Apagar la camara
+    //Apagar la camara
     recorder.stream.stop();
 
-    //Barra de progreso
-    let pasos = 0;
-    let timecomplete = timeSeconds*1000/15
-
-    id_barra_progreso = setInterval(estadosBarraProgreso, timecomplete)
-
+    //Barra de carga
+    let final = totalSeconds;
+    resetBarra();
+    pasos= 0;
     function estadosBarraProgreso() {
-        pasos++
         if (pasos <= 15) {
-            document.querySelector('#p_' + pasos).classList.remove('libre')
-            document.querySelector('#p_' + pasos).classList.add('ocupado')
+            pasos++
+            pintarBarra(pasos)
         } else {
             pasos = 0;
+            resetBarra();
         }
+    }
+
+    barra = setInterval(estadosBarraProgreso, final * 1000 / 18);
+}
+
+function subirGifo() {
+    //Prepara la vista
+    vistaprevia.classList.add('display-none');
+    titulovistaprevia.classList.add('display-none');
+    x.classList.remove('display-none');
+    subiendoguifo.classList.remove('display-none');
+    titulosubiendoguifo.classList.remove('display-none');
+    video.classList.add('display-none');
+    videoGif.classList.add('display-none');
+}
+
+function pintarBarra(pasos) {
+    document.querySelector('#p_' + pasos).classList.remove('libre');
+    document.querySelector('#p_' + pasos).classList.add('ocupado');
+}
+
+function resetBarra() {
+    for (var j = 1; j <= 15; j++) {
+        document.querySelector('#p_' + j).classList.remove('ocupado');
+        document.querySelector('#p_' + j).classList.add('libre');
     }
 }
 
-//Seccion cronometro
-
-let seg = document.getElementById('screen');
-let seg2 = document.getElementById('screen2');
+//Init Cronometro
 mm = 0;
 hh = 0;
 ss = 0
-let timeSeconds = 0;
+let totalSeconds = 0;
+let pasos = 0;
 
-function mostrar() {
+function mostrarCronometro() {
     ss++;
-    timeSeconds++;
+    totalSeconds++;
     if (ss == 59) {
         ss = 0;
         mm++;
@@ -132,13 +180,7 @@ function mostrar() {
 }
 
 
-subirguifo.addEventListener('click', () => {
-    vistaprevia.classList.add('display-none');
-    titulovistaprevia.classList.add('display-none');
-    x.classList.remove('display-none');
-    subiendoguifo.classList.remove('display-none');
-    titulosubiendoguifo.classList.remove('display-none');
-    video.classList.add('display-none');
-    videoGif.classList.add('display-none');
 
-})
+
+
+
