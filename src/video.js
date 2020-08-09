@@ -17,6 +17,8 @@ let titulosubiendoguifo = document.getElementById('titulosubiendo-guifo');
 let videoGif = document.getElementById('video-gif');
 let seg = document.getElementById('screen');
 let seg2 = document.getElementById('screen2');
+let subiendogifconexito = document.getElementById('subiendo-gifconexito');
+let titulosubiendoconexito = document.getElementById('titulosubiendo-guifoconexito');
 let interval
 let recorder
 let barra
@@ -37,7 +39,6 @@ function getStreamAndRecord() {
     format = (hh < 10 ? '0' + hh : hh) + ':' + (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
     seg.innerHTML = format;
     totalSeconds = 0;
-
 
 
     //preparo la vista
@@ -117,20 +118,22 @@ function stopRecording() {
 
     //Barra de carga
     let final = totalSeconds;
-    resetBarra();
-    pasos= 0;
+    resetBarra('p');
+    pasos = 0;
+
     function estadosBarraProgreso() {
         if (pasos <= 15) {
             pasos++
-            pintarBarra(pasos)
+            pintarBarra('p', pasos)
         } else {
             pasos = 0;
-            resetBarra();
+            resetBarra('p');
         }
     }
 
     barra = setInterval(estadosBarraProgreso, final * 1000 / 18);
 }
+
 
 function subirGifo() {
     //Prepara la vista
@@ -141,17 +144,38 @@ function subirGifo() {
     titulosubiendoguifo.classList.remove('display-none');
     video.classList.add('display-none');
     videoGif.classList.add('display-none');
+    //Barra
+    let pasos = 0;
+    id_barra_progreso = setInterval(estadosBarraProgreso2, 200);
+
+
+    function estadosBarraProgreso2() {
+        pasos++
+        if (pasos <= 15) {
+            document.querySelector('#q_' + pasos).classList.remove('libre')
+            document.querySelector('#q_' + pasos).classList.add('ocupado');
+            return
+        }
+        subiendogifconexito.classList.remove('display-none');
+        titulosubiendoconexito.classList.remove('display-none');
+        subiendoguifo.classList.add('display-none');
+        titulosubiendoguifo.classList.add('display-none');
+        videoGif.classList.remove('display-none')
+        videoGif.setAttribute('id','video-gif2');
+        seccionVideo.setAttribute('id', 'contenedor-video2')
+        clearInterval(id_barra_progreso)
+    }
 }
 
-function pintarBarra(pasos) {
-    document.querySelector('#p_' + pasos).classList.remove('libre');
-    document.querySelector('#p_' + pasos).classList.add('ocupado');
+function pintarBarra(id, pasos) {
+    document.querySelector('#' + id + '_' + pasos).classList.remove('libre');
+    document.querySelector('#' + id + '_' + pasos).classList.add('ocupado');
 }
 
-function resetBarra() {
+function resetBarra(id) {
     for (var j = 1; j <= 15; j++) {
-        document.querySelector('#p_' + j).classList.remove('ocupado');
-        document.querySelector('#p_' + j).classList.add('libre');
+        document.querySelector('#' + id + '_' + j).classList.remove('ocupado');
+        document.querySelector('#' + id + '_' + j).classList.add('libre');
     }
 }
 
