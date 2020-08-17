@@ -1,3 +1,5 @@
+// Constantes en General
+const apiKey = '56cTthKcllF5tck39cR59sP4wXo8fp5q';
 //Sección Crear Gifos-Captura VIDEO
 let video = document.getElementById('video-inicial');
 let comenzar = document.getElementById('comenzar');
@@ -19,9 +21,11 @@ let seg = document.getElementById('screen');
 let seg2 = document.getElementById('screen2');
 let subiendogifconexito = document.getElementById('subiendo-gifconexito');
 let titulosubiendoconexito = document.getElementById('titulosubiendo-guifoconexito');
+let misgifos = document.getElementById('contenido_mis_gifos');
 let interval
 let recorder
 let barra
+let blob
 
 
 //Pasos
@@ -112,6 +116,9 @@ function stopRecording() {
     //Stop la grabacion y prender video gif
     recorder.stopRecording(function () {
         videoGif.src = URL.createObjectURL(recorder.getBlob());
+        blob = recorder.getBlob();
+        videoGif.src = URL.createObjectURL(blob)
+
     })
     //Apagar la camara
     recorder.stream.stop();
@@ -161,10 +168,14 @@ function subirGifo() {
         subiendoguifo.classList.add('display-none');
         titulosubiendoguifo.classList.add('display-none');
         videoGif.classList.remove('display-none')
-        videoGif.setAttribute('id','video-gif2');
+        videoGif.setAttribute('id', 'video-gif2');
         seccionVideo.setAttribute('id', 'contenedor-video2')
         clearInterval(id_barra_progreso)
     }
+
+    let formData = new FormData();
+    formData.append('file', blob, 'myGift.gif');
+    uploadToServer(formData);
 }
 
 function pintarBarra(id, pasos) {
@@ -203,7 +214,58 @@ function mostrarCronometro() {
     seg2.innerHTML = format;
 }
 
+function uploadToServer(formData) {
+    const url = 'https://upload.giphy.com/v1/gifs';
+    let request = {
+        method: 'POST',
+        body: formData,
+        headers: new Headers(),
+        mode: 'cors',
+        cache: 'default'
+    }
+    fetch(url + '?api_key='+apiKey, request)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (json) {
+            let datos_misGifos = localStorage.getItem("misGifos")
+            let misGuifos = []
+            if (datos_misGifos != null) {
+                misGuifos = JSON.parse(datos_misGifos);
+            }
+            console.log(json.data.id);
+            misGuifos.push(json.data.id);
+            localStorage.setItem("misGifos", JSON.stringify(misGuifos));
+            //Pintar galeria mis guifos
+            getResults();
+        }).catch(e => {
+        console.log(e)
+    });
+}
 
+function getResults() {
+    let gifsGuardados = JSON.parse(localStorage.getItem("misGifos"))
+    const found = fetch('https://api.giphy.com/v1/gifs?api_key=' + apiKey + '&limit=25&ids=' + gifsGuardados.join(','))
+        .then(response => {
+            return response.json();
+        })
+        .then(function (json) {
+            let trendsHTML = '';
+            json.data.forEach(function (obj) {
+                const url = obj.images.fixed_width.url;
+                trendsHTML += `
+                <div class='contenido_busqueda_individual'>
+                    <img src= '${url}' width='275px' height='280px'alt='Imagen'>
+                </div>
+                `;
+            })
+            misgifos.innerHTML = trendsHTML;
+        })
+        .catch(error => {
+            return error;
+        });
+    return found;
+}
 
 
 
