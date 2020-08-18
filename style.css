@@ -512,6 +512,16 @@ padding: 6px;
   padding: 7px;
 }
 
+#contenido_mis_gifos{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 150px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
 /*Seccion Crear Guifos*/
 .logos_crear{
   position: relative;
@@ -1013,7 +1023,7 @@ position: relative;
   left: -170px;
 }
 
-.copiar-enlace{
+#copiar-enlace{
   cursor: pointer;
   font-family: 'Chakra Petch', sans-serif;
   font-size: 16px;
@@ -1032,7 +1042,7 @@ position: relative;
   top: -150px;
 }
 
-.descargar-gif{
+#descargar-gif{
   background: #FFF4FD;
   border: 1px solid #110038;
   box-shadow: inset -1px -1px 0 0 #997D97, inset 1px 1px 0 0 #FFFFFF;

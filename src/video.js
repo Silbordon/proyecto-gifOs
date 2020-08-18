@@ -22,6 +22,8 @@ let seg2 = document.getElementById('screen2');
 let subiendogifconexito = document.getElementById('subiendo-gifconexito');
 let titulosubiendoconexito = document.getElementById('titulosubiendo-guifoconexito');
 let misgifos = document.getElementById('contenido_mis_gifos');
+let copiar_enlace = document.getElementById('copiar-enlace');
+let descargar_gif = document.getElementById('descargar-gif');
 let interval
 let recorder
 let barra
@@ -34,6 +36,8 @@ repetircaptura.addEventListener('click', getStreamAndRecord);
 captura.addEventListener('click', startRecording);
 grabando.addEventListener('click', stopRecording);
 subirguifo.addEventListener('click', subirGifo);
+copiar_enlace.addEventListener('click', copiarEnlace);
+descargar_gif.addEventListener('click', descargarGif)
 
 function getStreamAndRecord() {
     //Init cronometro
@@ -267,6 +271,17 @@ function getResults() {
     return found;
 }
 
+function copiarEnlace() {
+    let aux = document.createElement("input");
+    aux.value = document.querySelector('.contenido_mis_gifos').dataset.id;
+    document.body.appendChild(aux);
+    aux.select();
+    document.execCommand("copy");
+    document.body.removeChild(aux);
+}
 
+function descargarGif() {
+    invokeSaveAsDialog(blob);
+}
 
 
