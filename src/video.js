@@ -28,6 +28,7 @@ let interval
 let recorder
 let barra
 let blob
+let lastURL
 
 
 //Pasos
@@ -249,7 +250,7 @@ function uploadToServer(formData) {
 
 function getResults() {
     let gifsGuardados = JSON.parse(localStorage.getItem("misGifos"))
-    const found = fetch('https://api.giphy.com/v1/gifs?api_key=' + apiKey + '&limit=25&ids=' + gifsGuardados.join(','))
+    const found = fetch('https://api.giphy.com/v1/gifs?api_key=' + apiKey + '&limit=10&ids=' + gifsGuardados.join(','))
         .then(response => {
             return response.json();
         })
@@ -257,6 +258,7 @@ function getResults() {
             let trendsHTML = '';
             json.data.forEach(function (obj) {
                 const url = obj.images.fixed_width.url;
+                lastURL = url
                 trendsHTML += `
                 <div class='contenido_busqueda_individual'>
                     <img src= '${url}' width='275px' height='280px'alt='Imagen'>
@@ -273,7 +275,7 @@ function getResults() {
 
 function copiarEnlace() {
     let aux = document.createElement("input");
-    aux.value = document.querySelector('.contenido_mis_gifos').dataset.id;
+    aux.setAttribute("value", lastURL);
     document.body.appendChild(aux);
     aux.select();
     document.execCommand("copy");
