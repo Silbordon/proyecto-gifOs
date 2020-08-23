@@ -1,5 +1,6 @@
 // Constantes en General
 const apiKey = '56cTthKcllF5tck39cR59sP4wXo8fp5q';
+localStorage.setItem("mode", "light");
 
 // Se ejecuta cuando termina de cargarse la pagina
 document.addEventListener('DOMContentLoaded', () => {
@@ -93,6 +94,7 @@ function mostrar_titulo_tendencia(entrada) {
     return result;
 }
 
+
 //Selector Tema: claro y oscuro
 let selectorTema = document.getElementById("selector_tema");
 selectorTema.addEventListener("click", () => {
@@ -102,6 +104,7 @@ selectorTema.addEventListener("click", () => {
 
 let sailorDay = document.getElementById("tema_claro");
 sailorDay.addEventListener("click", () => {
+    localStorage.setItem("mode", "light");
     let body = document.getElementsByTagName("body");
     body[0].classList.remove("dark");
     let logo = document.getElementById("logo");
@@ -110,6 +113,7 @@ sailorDay.addEventListener("click", () => {
 
 let sailorNight = document.getElementById("tema_oscuro");
 sailorNight.addEventListener("click", () => {
+    localStorage.setItem("mode", "dark");
     let body = document.getElementsByTagName("body");
     body[0].classList.add("dark");
     let lupa = document.getElementById("boton_busqueda_img");

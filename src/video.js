@@ -38,7 +38,16 @@ captura.addEventListener('click', startRecording);
 grabando.addEventListener('click', stopRecording);
 subirguifo.addEventListener('click', subirGifo);
 copiar_enlace.addEventListener('click', copiarEnlace);
-descargar_gif.addEventListener('click', descargarGif)
+descargar_gif.addEventListener('click', descargarGif);
+
+//Tema-Set mode
+
+if(localStorage.getItem("mode") == "dark"){
+    let body = document.getElementsByTagName("body");
+    body[0].classList.add("dark");
+    let logo = document.getElementById("logo");
+    logo.setAttribute("src", "images/gifOF_logo_dark.png");
+}
 
 function getStreamAndRecord() {
     //Init cronometro
