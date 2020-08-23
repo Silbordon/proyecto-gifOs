@@ -531,6 +531,27 @@ margin-bottom: 10px;
   justify-content: space-between;
 }
 
+#contenido_mis_gifos2{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  top: 30px;
+}
+
+.titulo_misguifos2{
+  background: #FFFAFE;
+  border: 1px solid #E6BBE2;
+  box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #80687D; 
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 14px;
+  color: #110038;
+  letter-spacing: 0;
+  position: relative;
+  padding: 7px;
+}
 /*Seccion Crear Guifos*/
 .logos_crear{
   position: relative;

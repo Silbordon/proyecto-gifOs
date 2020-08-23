@@ -116,10 +116,12 @@ sailorNight.addEventListener("click", () => {
     localStorage.setItem("mode", "dark");
     let body = document.getElementsByTagName("body");
     body[0].classList.add("dark");
-    let lupa = document.getElementById("boton_busqueda_img");
-    lupa.setAttribute("src", "images/combinedShape.svg");
     let logo = document.getElementById("logo");
     logo.setAttribute("src", "images/gifOF_logo_dark.png");
+    let lupa = document.getElementById("boton_busqueda_img");
+    if (lupa != null){
+        lupa.setAttribute("src", "images/combinedShape.svg");
+    }
 })
 
 

@@ -29,6 +29,9 @@ let recorder
 let barra
 let blob
 let lastURL
+let postFinished =  false;
+
+getResults();
 
 
 //Pasos
@@ -171,8 +174,17 @@ function subirGifo() {
 
 
     function estadosBarraProgreso2() {
-        pasos++
+        if (pasos <= 10) {
+            pasos++
+            document.querySelector('#q_' + pasos).classList.remove('libre')
+            document.querySelector('#q_' + pasos).classList.add('ocupado');
+            return
+        }
+        if (!postFinished){
+            return
+        }
         if (pasos <= 15) {
+            pasos++
             document.querySelector('#q_' + pasos).classList.remove('libre')
             document.querySelector('#q_' + pasos).classList.add('ocupado');
             return
@@ -239,6 +251,7 @@ function uploadToServer(formData) {
     }
     fetch(url + '?api_key='+apiKey, request)
         .then(function (response) {
+            postFinished = true;
             return response.json()
         })
         .then(function (json) {
