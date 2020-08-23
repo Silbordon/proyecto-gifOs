@@ -48,6 +48,9 @@
     --btn_sugerencias-background: #4180F6;
     --btn_sugerencias-box-shadow:inset -2px -2px 0 0 #284F99, inset 2px 2px 0 0 #FFFFFF;
     --contenido_busqueda_individual_tendencias-background:linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    --contenedor_instrucciones_box-shadow :inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
+    --btn-cancelar-background : #F0E5EE;
+    --contenedor-video-box-shadow:inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF;
   }
   
   
@@ -101,5 +104,7 @@
     --btn_sugerencias-background:#2E32FB;
     --btn_sugerencias-box-shadow:inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
     --contenido_busqueda_individual_tendencias-background:linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
-  
+    --contenedor_instrucciones_box-shadow:inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
+    --btn-cancelar-background :#6442c2;
+    --contenedor-video-box-shadow:inset -2px -2px 0 0 #8F8F8F, inset 2px 2px 0 0 #FFFFFF;
   }

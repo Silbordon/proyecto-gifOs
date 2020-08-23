@@ -47,15 +47,27 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(function (json) {
                 let trendsHTML = '';
+                let biggerimage = 0;
                 json.data.forEach(function (obj) {
+                    biggerimage++;
                     const url = obj.images.fixed_width.url;
                     let url_titulo = mostrar_titulo_tendencia(obj.slug);
-                    trendsHTML += `
-                <div class='contenido_busqueda_individual_tendencias'>
-                    <img class='img_tendencias' src= '${url}' width='275px' height='280px'alt='Imagen'>
-                    <h1 class='titulo_tendenciasindividual'>${url_titulo}</h1>
-                </div>
-                `;
+                    if (biggerimage % 5 == 0) {
+                        trendsHTML += `
+                        <div class='contenido_busqueda_individual_tendencias'>
+                            <img class='img_tendencias' src= '${url}' width='560px' height='280px'alt='Imagen'>
+                            <h1 class='titulo_tendenciasindividual'>${url_titulo}</h1>
+                        </div>
+                        `;
+                    } else {
+                        trendsHTML += `
+                        <div class='contenido_busqueda_individual_tendencias'>
+                            <img class='img_tendencias' src= '${url}' width='275px' height='280px'alt='Imagen'>
+                            <h1 class='titulo_tendenciasindividual'>${url_titulo}</h1>
+                        </div>
+                        `;
+                    }
+
                 })
                 seccion_Tendencias.innerHTML = trendsHTML;
             })
