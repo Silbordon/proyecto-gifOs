@@ -1,7 +1,9 @@
 let misgifos = document.getElementById('contenido_mis_gifos2');
 // Se ejecuta cuando termina de cargarse la pagina
 document.addEventListener('DOMContentLoaded', () => {
-    getResults();
+    if (localStorage.getItem("misGifos")!=null){
+        getResults();
+    }
 });
 
 

@@ -31,7 +31,9 @@ let blob
 let lastURL
 let postFinished =  false;
 
-getResults();
+if (localStorage.getItem("misGifos")!=null){
+    getResults();
+}
 
 
 //Pasos
