@@ -38,7 +38,7 @@ function getSearchResults(search) {
     if (document.getElementsByName(`'${search}'`).length == 0) {
         historialbusqueda.innerHTML += `<button name="'${search}'" onclick="getSearchResults('${search}')" class="historial">#${search}</button>`
     }
-    const found = fetch(`http://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${search}&limit=16`)
+    const found = fetch(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${search}&limit=16`)
         .then(response => {
             return response.json();
         })
@@ -64,7 +64,7 @@ function getSearchResults(search) {
 }
 
 function completarSugerencias(texto) {
-        const found = fetch(`http://api.giphy.com/v1/gifs/search/tags?api_key=56cTthKcllF5tck39cR59sP4wXo8fp5q&q=${texto}`)
+        const found = fetch(`https://api.giphy.com/v1/gifs/search/tags?api_key=56cTthKcllF5tck39cR59sP4wXo8fp5q&q=${texto}`)
             .then(response => {
                 return response.json();
             })
