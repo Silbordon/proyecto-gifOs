@@ -1,5 +1,5 @@
 // Constantes en General
-const apiKey = '56cTthKcllF5tck39cR59sP4wXo8fp5q';
+let apiKey = '56cTthKcllF5tck39cR59sP4wXo8fp5q';
 localStorage.setItem("mode", "light");
 
 // Se ejecuta cuando termina de cargarse la pagina
