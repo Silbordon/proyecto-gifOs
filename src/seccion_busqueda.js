@@ -1,5 +1,3 @@
-const sugerencias = ["autocompletar", "sugerencia1", "sugerencia2"]
-
 const cont_sugerencias = document.getElementById('contenedor_sugerencias');
 const autocompletar = document.getElementById('autocompletar');
 const sugerencia1 = document.getElementById('sugerencia1');

@@ -1,5 +1,5 @@
 // Constantes en General
-let apiKey = '56cTthKcllF5tck39cR59sP4wXo8fp5q';
+let key = '56cTthKcllF5tck39cR59sP4wXo8fp5q';
 //Sección Crear Gifos-Captura VIDEO
 let video = document.getElementById('video-inicial');
 let comenzar = document.getElementById('comenzar');
@@ -251,7 +251,7 @@ function uploadToServer(formData) {
         mode: 'cors',
         cache: 'default'
     }
-    fetch(url + '?api_key='+apiKey, request)
+    fetch(url + '?api_key='+key, request)
         .then(function (response) {
             postFinished = true;
             return response.json()
@@ -274,7 +274,7 @@ function uploadToServer(formData) {
 
 function getResults() {
     let gifsGuardados = JSON.parse(localStorage.getItem("misGifos"))
-    const found = fetch('https://api.giphy.com/v1/gifs?api_key=' + apiKey + '&limit=10&ids=' + gifsGuardados.join(','))
+    const found = fetch('https://api.giphy.com/v1/gifs?api_key=' + key + '&limit=10&ids=' + gifsGuardados.join(','))
         .then(response => {
             return response.json();
         })
